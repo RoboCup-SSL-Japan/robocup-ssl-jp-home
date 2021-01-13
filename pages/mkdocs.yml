@@ -1,0 +1,23 @@
+site_name: RoboCup SSL Japan
+
+nav:
+  - ホーム: index.md
+  - RoboCup SSLとは: about.md
+  # - 予定されているイベント:
+  - 過去のイベント:
+    - 2020年以前のイベント: prev_events/20000101_2020年以前のイベント.md
+    - SSL練習試合・研究会2020: prev_events/20201122_SSL研究会.md
+  - リンク: links.md
+
+theme:
+  name: material
+  logo: img/standard_pattern.png
+  favicon: img/standard_pattern.png
+  language: ja
+  palette:
+    primary: green
+  features:
+    - navigation.tabs
+
+markdown_extensions:
+  - attr_list
