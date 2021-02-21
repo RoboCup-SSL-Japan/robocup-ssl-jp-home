@@ -8,9 +8,18 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - run: '[ -n "${{secrets.DEPLOY_DIRECTORY}}" ] && [ -n "${{secrets.SERVER_ADDR}}" ] && [ -n "${{secrets.SERVER_USER}}" ] && [ -n "${{secrets.DEPLOY_KEY}}" ]'
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
           python-version: 3.x
       - run: pip install mkdocs-material
-      - run: cd pages && mkdocs gh-deploy --force
+      - run: cd pages && mkdocs build
+      # - uses: burnett01/rsync-deployments@22f8d1ffe807551ba75eba6a450c3d577690249f
+      #   with: 
+      #     switches: -avzr -n
+      #     path: pages/site/
+      #     remote_path: ${{secrets.DEPLOY_DIRECTORY}}
+      #     remote_host: ${{secrets.SERVER_ADDR}}
+      #     remote_user: ${{secrets.SERVER_USER}}
+      #     remote_key: ${{secrets.DEPLOY_KEY}}
