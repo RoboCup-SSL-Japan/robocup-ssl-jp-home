@@ -17,7 +17,7 @@ jobs:
       - run: cd pages && mkdocs build
       - uses: burnett01/rsync-deployments@22f8d1ffe807551ba75eba6a450c3d577690249f
         with: 
-          switches: -avzr -n
+          switches: -avzr
           path: pages/site/
           remote_path: ${{secrets.DEPLOY_DIRECTORY}}
           remote_host: ${{secrets.SERVER_ADDR}}
