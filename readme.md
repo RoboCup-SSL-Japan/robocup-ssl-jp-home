@@ -1,24 +1,10 @@
-## 編集を始めるには
+# RoboCup SSL Japan ホームページ
 
-### 前提環境
-- python 3.6 以上
+RoboCup SSL Japanのホームページです。  
+大会・イベント参加のための情報や、過去の成績などを掲載しています。
 
-### 環境構築
-以下のコマンドを実行します。
+## 貢献の仕方
+指摘や提案などは Issue にて受け付けます。  
 
-```
-python3 -m venv venv
-source venv/bin/activate
-pip install -r requirements.txt
-```
-
-### プレビュー用サーバの立ち上げ
-```
-cd pages
-mkdocs serve
-```
-
-上記コマンドでプレビュー用サーバが立ち上がります。
-立ち上がった後は、 `http://localhost:8000/` でプレビューが確認できます。
-
-
+Pull Request も受け付けています。  
+HP開発環境の構築方法は [開発者向け情報](FOR_DEVELOPERS.md) を御覧ください。
